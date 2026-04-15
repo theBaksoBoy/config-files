@@ -51,3 +51,6 @@
 
 
 (package! beacon)
+
+(package! odin-mode
+  :recipe (:host github :repo "mattt-b/odin-mode"))

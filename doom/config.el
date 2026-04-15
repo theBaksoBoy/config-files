@@ -231,3 +231,6 @@
       (if existing
           (setcdr existing (cdr p))
         (push p evil-surround-pairs-alist)))))
+
+(use-package! odin-mode
+  :mode "\\.odin\\'")
