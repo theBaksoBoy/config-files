@@ -234,5 +234,3 @@
 
 (use-package! odin-mode
   :mode "\\.odin\\'")
-
-(evil-ex-define-cmd "|" 'evil-write) ;; I often do :| by accident on PENOR keyboard
