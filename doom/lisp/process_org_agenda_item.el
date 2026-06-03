@@ -15,7 +15,6 @@
   (forward-char 2)
 
   (let ((first-char (char-after)))
-  (message "Character found: %c" first-char)
 
     (cond
      ((eq first-char ?!)
