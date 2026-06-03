@@ -1,5 +1,7 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
+(load! "lisp/process_org_agenda_item")
+
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
@@ -132,6 +134,10 @@
 (map! :leader
       :desc "Open agenda (shortcut)"
       "o o" #'(lambda () (interactive) (find-file  "~/notes/tasks/tasks.org") (org-agenda nil "u")))
+(after! org-agenda
+  (define-key org-agenda-keymap
+    (kbd "ä")
+    #'my/org-agenda-process-item))
 
 ;; make visual lines (wrapped around lines) able to be navigated through more intuitively
 (map!
