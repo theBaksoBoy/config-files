@@ -8,31 +8,35 @@
 (defun my/org-agenda-process-item ()
   (interactive)
 
-  (org-agenda-switch-to)
+  (let ((my-saved-point (point)))
 
-  (org-back-to-heading t)
-  (beginning-of-line)
-  (forward-char 2)
+    (org-agenda-switch-to)
 
-  (let ((first-char (char-after)))
+    (org-back-to-heading t)
+    (beginning-of-line)
+    (forward-char 2)
 
-    (cond
-     ((eq first-char ?!)
-      (message "Protected item"))
+    (let ((first-char (char-after)))
 
-     ((eq first-char ?+)
-      (let ((repeat-token
-             (buffer-substring-no-properties
-              (point)
-              (save-excursion
-                (skip-chars-forward "^ ")
-                (point)))))
+      (cond
+       ((eq first-char ?!)
+        (message "Protected item"))
 
-        (org-schedule nil repeat-token)
+       ((eq first-char ?+)
+        (let ((repeat-token
+               (buffer-substring-no-properties
+                (point)
+                (save-excursion
+                  (skip-chars-forward "^ ")
+                  (point)))))
+
+          (org-schedule nil repeat-token)
+          (save-buffer)
+          (my/open-agenda-shortcut)
+          (goto-char my-saved-point)))
+
+       (t
+        (org-cut-subtree)
         (save-buffer)
-        (my/open-agenda-shortcut)))
-
-     (t
-      (org-cut-subtree)
-      (save-buffer)
-      (my/open-agenda-shortcut)))))
+        (my/open-agenda-shortcut)
+        (goto-char my-saved-point))))))
