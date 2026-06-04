@@ -240,3 +240,6 @@
 
 (use-package! odin-mode
   :mode "\\.odin\\'")
+
+(setq scroll-margin 10
+      scroll-conservatively 101)
