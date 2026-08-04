@@ -47,8 +47,6 @@ eval "$(fzf --zsh)"
 export EDITOR=vim
 export VISUAL=vim
 
-bindkey -e
-
 # history configuration
 HISTSIZE=5000
 SAVEHIST=$HISTSIZE
@@ -69,9 +67,10 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # keybinds
-# set keybinds for ctrl + arrows
-bindkey "^[[1;5C" forward-word
-bindkey "^[[1;5D" backward-word
+bindkey -e
+bindkey "^[[1;5C" forward-word # ctrl + right arrow
+bindkey "^[[1;5D" backward-word # ctrl + left arrow
+bindkey "^H" backward-kill-word # ctrl + backspace
 
 
 # custom aliases
