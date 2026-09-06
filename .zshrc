@@ -75,17 +75,18 @@ bindkey "^H" backward-kill-word # ctrl + backspace
 
 # custom aliases
 alias ls="ls --color"
-alias emilate='"/home/bakso/prog/memory media tool/MemoryMediaTool.py"'
 alias restartsoundserver='systemctl --user restart wireplumber pipewire pipewire-pulse'
 alias doomemacs="emacsclient -c -a 'emacs'"
 alias pm="python3 main.py"
 alias initializetablet='xinput set-prop 18 "Coordinate Transformation Matrix" -0.5 0 1 0 -1 1 0 0 1'
-alias chunkvideo="/home/bakso/video_chunker.sh"
 alias vpnon="nmcli connection up integrity2-SE"
 alias vpnoff="nmcli connection down integrity2-SE"
-alias tor="cd /home/bakso/Programs/tor-browser && ./start-tor-browser.desktop &"
-alias moneylogger="./prog/money_logger/money_logger"
-alias archmaintainer="/home/bakso/programs/archmaintainer/archmaintainer.sh"
+# script aliases
+alias emilate='"/home/bakso/prog/memory_media_tool/MemoryMediaTool.py"'
+alias chunkvideo="/home/bakso/prog/video_chunker.sh"
+alias moneylogger="/home/bakso/prog/money_logger/money_logger"
+alias archmaintainer="/home/bakso/prog/archmaintainer/archmaintainer.sh"
+
 
 spk() {
 	espeak -s 275 "$1"
