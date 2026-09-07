@@ -45,10 +45,10 @@ def natural_key(s):
             for text in re.split(r'(\d+)', s)]
 
 inputDirectories = (
-    {"directory": r"/media/bakso/8076A3FA76A3EEDA/Videos/", "name": "D-drive Videos"},
+    {"directory": r"/media/bakso/8076A3FA76A3EEDA/videos/", "name": "D-drive videos"},
     {"directory": r"/home/bakso/Downloads/", "name": "Downloads     "})
 
-outputDirectory = r"/media/bakso/8076A3FA76A3EEDA/Memory Media/"
+outputDirectory = r"/media/bakso/8076A3FA76A3EEDA/memory_media/"
 
 # the input folder has some files that have been generated automatically that I don't know if I can remove
 fileTypesToIgnore = ("ini")
