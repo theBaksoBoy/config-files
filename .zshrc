@@ -83,7 +83,7 @@ alias vpnon="nmcli connection up integrity2-SE"
 alias vpnoff="nmcli connection down integrity2-SE"
 # script aliases
 alias emilate='"/home/bakso/prog/memory_media_tool/MemoryMediaTool.py"'
-alias chunkvideo="/home/bakso/prog/video_chunker.sh"
+alias chunkvideo="/home/bakso/prog/video_chunker/video_chunker.sh"
 alias moneylogger="/home/bakso/prog/money_logger/money_logger"
 alias archmaintainer="/home/bakso/prog/archmaintainer/archmaintainer.sh"
 
