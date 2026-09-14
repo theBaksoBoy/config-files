@@ -71,6 +71,9 @@ bindkey -e
 bindkey "^[[1;5C" forward-word # ctrl + right arrow
 bindkey "^[[1;5D" backward-word # ctrl + left arrow
 bindkey "^H" backward-kill-word # ctrl + backspace
+bindkey "^[[H" beginning-of-line # home
+bindkey "^[[F" end-of-line # end
+bindkey "^[[3~" delete-char # delete
 
 
 # custom aliases
