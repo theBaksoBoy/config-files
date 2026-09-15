@@ -47,6 +47,7 @@ eval "$(zoxide init zsh)"
 
 export EDITOR=vim
 export VISUAL=vim
+export PAGER=bat
 
 # history configuration
 HISTSIZE=5000
