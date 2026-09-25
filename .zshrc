@@ -116,6 +116,7 @@ gitaddcommitpush() {
 
 # path exports
 export PATH="$HOME/.config/emacs/bin:$PATH"
+export PATH="$HOME//.emacs.d/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/odin:$PATH"
 
