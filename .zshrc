@@ -88,6 +88,7 @@ alias initializetablet='xinput set-prop 18 "Coordinate Transformation Matrix" -0
 alias vpnon="nmcli connection up integrity2-SE"
 alias vpnoff="nmcli connection down integrity2-SE"
 alias kys="shutdown -h now"
+alias cd="echo\"nuh uh! Get used to using z instead of cd!\""
 # script aliases
 alias emilate='"/home/bakso/prog/memory_media_tool/MemoryMediaTool.py"'
 alias chunkvideo="/home/bakso/prog/video_chunker/video_chunker.sh"
