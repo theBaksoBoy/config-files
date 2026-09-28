@@ -9,7 +9,7 @@ import re
 inputDirectories = (
     {"directory": r"/home/bakso/Downloads/", "name": "Downloads      "},
     {"directory": r"/home/bakso/Videos/", "name": "Videos         "},
-    {"directory": r"/media/bakso/8076A3FA76A3EEDA/videos/", "name": "videos (drived)"}
+    {"directory": r"/mnt/drived/videos/", "name": "videos (drived)"}
 )
 
 outputDirectory = r"/mnt/drived/memory_media/"
