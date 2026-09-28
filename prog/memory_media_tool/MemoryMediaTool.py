@@ -6,6 +6,15 @@ from datetime import datetime
 import re
 
 
+inputDirectories = (
+    {"directory": r"/home/bakso/Downloads/", "name": "Downloads      "},
+    {"directory": r"/home/bakso/Videos/", "name": "Videos         "},
+    {"directory": r"/media/bakso/8076A3FA76A3EEDA/videos/", "name": "videos (drived)"}
+)
+
+outputDirectory = r"/mnt/drived/memory_media/"
+
+
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -43,12 +52,6 @@ def input_green(string: str = ""):
 def natural_key(s):
     return [int(text) if text.isdigit() else text.lower()
             for text in re.split(r'(\d+)', s)]
-
-inputDirectories = (
-    {"directory": r"/media/bakso/8076A3FA76A3EEDA/videos/", "name": "D-drive videos"},
-    {"directory": r"/home/bakso/Downloads/", "name": "Downloads     "})
-
-outputDirectory = r"/media/bakso/8076A3FA76A3EEDA/memory_media/"
 
 # the input folder has some files that have been generated automatically that I don't know if I can remove
 fileTypesToIgnore = ("ini")
